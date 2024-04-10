@@ -1,7 +1,7 @@
 # Client Finder
 ## _A Command-line Application_
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+[![Branch Status](https://img.shields.io/github/last-commit/johnarriesgado/client_finder/master)](https://github.com/johnarriesgado/client_finder/branches)
 
 This is a minimalist command-line application built using Ruby. It allows users to search through a JSON dataset of clients and perform two operations:
 
