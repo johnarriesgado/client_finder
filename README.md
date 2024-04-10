@@ -16,43 +16,71 @@ To use the application, follow these steps:
 ```
 git clone https://github.com/johnarriesgado/client_finder.git
 ```
+
 2. Navigate to the project directory.
+```
+cd client_finder
+```
+
 3. Run the application using the following commands:
+```
+ruby client_search.rb
+```
 
-  ```bash
-    > ruby client_finder.rb
-  ```
-
-4. And respond according to the given prompt.
+4. Provide a response based on the instructions given.
+```
+Enter command 'search', 'duplicates', or 'quit' to exit:
+|
+```
 
 ### Examples
 
   #### Search
+  ##### Replace `[SEARCH_QUERY]` with the search query you want to use.
+
+  ##### When Client is found.
   ```
-    > ruby client_finder.rb
-    Enter command (search or duplicates):
+    > ruby client_search.rb
+    Enter command 'search', 'duplicates', or 'quit' to exit:
     > search
-    Find client:
+    Enter the search query:
     > SEARCH_QUERY
     {"full_name"=>"SEARCH_QUERY Smith", "email"=>"search_query.smith@yahoo.com"}
   ```
-  ##### Replace `[SEARCH_QUERY]` with the search query you want to use.
-
-  #### Find Duplicates
+  ##### When no Client is found.
   ```
     > ruby client_search.rb
-    Enter command (s or search, d or duplicates):
+    Enter command 'search', 'duplicates', or 'quit' to exit:
+    > search
+    Enter the search query:
+    > SEARCH_QUERY
+    No matching clients found.
+  ```
+
+  #### Find Duplicates
+  ##### When duplicates are found.
+  ```
+    > ruby client_search.rb
+    Enter command 'search', 'duplicates', or 'quit' to exit:
     > duplicates
     Duplicate emails found:
     "jane.smith@yahoo.com"
   ```
+  ##### When no duplicates found.
+  ```
+    > ruby client_search.rb
+    Enter command 'search', 'duplicates', or 'quit' to exit:
+    > duplicates
+    No duplicate emails found.
+  ```
+
   #### Invalid Input
   ```
     > ruby client_search.rb
-    Enter command (s or search, d or duplicates):
+    Enter command 'search', 'duplicates', or 'quit' to exit:
     > lorem
     Invalid option.
-    Enter command (s or search, d or duplicates):
+    Enter command 'search', 'duplicates', or 'quit' to exit:
   ```
 
 ## Dataset
@@ -72,7 +100,7 @@ The application uses a JSON dataset containing client information. The dataset i
 - Input only accepts two options: `search or duplicates`.
 - Input operators only accepts downcase commands. 
 - For the search operation
-  - partial matches are considered for both `full_name` and `email` fields.
+  - partial matches are considered for both `full_name` and `email` fields only. The `id` field is not used.
   - returned dataset for matches includes all fields. no security options added in place
   - Any input from user is for search client and not to exit application.
 - For the duplicates operation
@@ -82,6 +110,7 @@ The application uses a JSON dataset containing client information. The dataset i
 - User will provide valid inputs, search queries, and email addresses.
 - The output format for displaying client details is assumed to be JSON.
 - IDs are not used for searching queries.
+- There should be a limit to the number of invalid command entered.
 
 ### Suggestions for Improvement
 - Implement better error handling for invalid user inputs to provide better user experience.
