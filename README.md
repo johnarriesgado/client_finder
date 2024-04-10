@@ -92,6 +92,7 @@ The application uses a JSON dataset containing client information. The dataset i
 - Ruby installed on your machine
   ```
   Ruby version: ruby-3.1.0
+  RSpec Gem version ~3.13.0
   ```
 
 ### Assumptions
