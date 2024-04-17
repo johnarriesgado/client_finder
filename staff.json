@@ -1,0 +1,18 @@
+[
+  {
+      "id": 1,
+      "full_name": "John Doe",
+      "email": "john.doe@gmail.com",
+      "rating": 2.2
+  }, {
+      "id": 2,
+      "full_name": "Jane Smith",
+      "email": "jane.smith@yahoo.com",
+      "rating": 3.1
+  }, {
+      "id": 3,
+      "full_name": "Another Jane Smith",
+      "email": "jane.smith@yahoo.com",
+      "rating": 4.5
+  }
+]
